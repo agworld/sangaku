@@ -18,6 +18,18 @@ module Sangaku
       (p2.y - p1.y).abs
     end
 
+    def length
+      Math.sqrt(vx ** 2 + vy ** 2)
+    end
+
+    def vx
+      p2.x - p1.x
+    end
+
+    def vy
+      p2.y - p1.y
+    end
+
     def get_x(y)
       ratio = (y-p1.y)/(p2.y-p1.y).to_f rescue 0.5
       p1.x + ratio * (p2.x-p1.x)
@@ -39,11 +51,11 @@ module Sangaku
     end
 
     def dot(other)
-      self.x * other.x + self.y * other.y
+      (self.vx * other.vx + self.vy * other.vy)/(self.length * other.length)
     end
 
     def cross(other)
-      self.x * other.y - self.y * other.x
+      self.vx * other.vy - self.vy * other.vx
     end
 
     def contain?(x = nil, y = nil)
