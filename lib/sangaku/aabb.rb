@@ -6,7 +6,7 @@ module Sangaku
       points = Point::convert(points)
       xs = points.map { |p| p.x }
       ys = points.map { |p| p.y }
-      @line = Line.new([xs.min, ys.min], [xs.max, ys.max])
+      @line = Line.new([xs.min || 0, ys.min || 0], [xs.max || 0, ys.max || 0])
     end
 
     def min; @line.p1; end
