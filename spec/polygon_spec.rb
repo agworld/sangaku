@@ -2,10 +2,10 @@ require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 module Sangaku
 
-  describe Poly do
+  describe Polygon do
 
     it "should just work" do
-      poly = Poly.new([1, 2], [3, 4], [5, 6])
+      poly = Polygon.new([1, 2], [3, 4], [5, 6])
       lines = poly.lines
       lines.length.should eq(2)
       poly.close!
@@ -19,7 +19,7 @@ module Sangaku
     end
 
     it "should be possible to select lines" do
-      poly = Poly.new([1, 2], [3, 4], [5, 6], [7, 8])
+      poly = Polygon.new([1, 2], [3, 4], [5, 6], [7, 8])
       poly.close!
       lines = poly.select(2)
       lines.length.should eq(2)
@@ -28,7 +28,7 @@ module Sangaku
     end
 
     it "should be possible to get the bounding box" do
-      poly = Poly.new([1, 7], [3, 4], [5, 6], [8, 2])
+      poly = Polygon.new([1, 7], [3, 4], [5, 6], [8, 2])
       aabb = poly.aabb
       aabb.min.to_s.should eq("(1, 2)")
       aabb.max.to_s.should eq("(8, 7)")

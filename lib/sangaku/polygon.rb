@@ -1,6 +1,6 @@
 module Sangaku
 
-  class Poly
+  class Polygon
 
     def initialize(*points)
       @points = Point::convert(points)
