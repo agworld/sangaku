@@ -1,0 +1,6 @@
+require 'sangaku/point'
+require 'sangaku/line'
+require 'sangaku/polygon'
+require 'sangaku/aabb'
+require 'sangaku/grid'
+require 'sangaku/star'
