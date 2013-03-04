@@ -8,6 +8,7 @@ group :test do
   gem "rake"
   gem "rspec"
   gem "yard"
+  gem "debugger"
 end
 
 group :document do
