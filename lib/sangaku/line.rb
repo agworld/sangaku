@@ -19,11 +19,11 @@ module Sangaku
     end
 
     def get_x(y)
-      ratio = (y-p1.y)/(p2.y-p1.y).to_f rescue 0.5
+      ratio = p1.y != p2.y ? (y-p1.y)/(p2.y-p1.y).to_f : 0.5
       p1.x + ratio * (p2.x-p1.x)
     end
     def get_y(x)
-      ratio = (x-p1.x)/(p2.x-p1.x).to_f rescue 0.5
+      ratio = p1.x != p2.x ? (x-p1.x)/(p2.x-p1.x).to_f : 0.5
       p1.y + ratio * (p2.y-p1.y)
     end
 
