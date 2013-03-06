@@ -7,6 +7,7 @@ module Sangaku
     end
 
     def get_stars(poly)
+      raise Errors::OpenPolygonError.new unless poly.closed?
       stars = []
 
       @xs.each do |x|
