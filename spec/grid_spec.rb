@@ -14,6 +14,15 @@ module Sangaku
         expect { grid.get_stars(poly) }.to raise_error(Errors::OpenPolygonError)
       end
 
+      it "should work for a poly that folds back on itself" do
+        xs = [1,2,3,4,5]
+        ys = [1,2,3,4,5]
+        grid = Grid.new(xs,ys)
+        poly = Polygon.new([1,1],[1,4],[1,3],[2,2],[4,1])
+        poly.close!
+        grid.get_stars(poly)
+      end
+
     end
 
   end

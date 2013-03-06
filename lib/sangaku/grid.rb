@@ -19,6 +19,8 @@ module Sangaku
           xs = poly.select(nil, y).map { |line| line.get_x(y) }
           xs.sort!
           s = xs.zip(xs.rotate).find { |a, b| x.between?(a, b) }
+          # TODO: de-hack
+          next unless s
           width = 2 * [(x-s[0]).abs, (x-s[1]).abs].min
           Star.new([x, y], [width, height])
         end
@@ -33,12 +35,15 @@ module Sangaku
           ys = poly.select(x, nil).map { |line| line.get_y(x) }
           ys.sort!
           s = ys.zip(ys.rotate).find { |a, b| y.between?(a, b) }
+          # TODO: de-hack
+          next unless s
           height = 2 * [(y-s[0]).abs, (y-s[1]).abs].min
           Star.new([x, y], [width, height])
         end
       end
 
-      stars
+      #TODO: de-hack
+      stars.reject{|s| s.nil?}
     end
 
   end
