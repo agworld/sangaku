@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "sangaku"
-  s.version = "0.5.3"
+  s.version = "0.5.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jason Hutchens"]
-  s.date = "2013-03-01"
+  s.date = "2013-03-15"
   s.description = "Sangaku contains classes for Point, Line, Polygon, AABB and so on in 2D. It can find the 'pole of inaccessibility' for a polygon. And it can simply the boundary of a polygon to minimise points while retaining detail. It works well with Gosu."
   s.email = "jason.hutchens@agworld.com.au"
   s.extra_rdoc_files = [
@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
     "VERSION",
     "lib/sangaku.rb",
     "lib/sangaku/aabb.rb",
+    "lib/sangaku/errors.rb",
     "lib/sangaku/grid.rb",
     "lib/sangaku/line.rb",
     "lib/sangaku/point.rb",

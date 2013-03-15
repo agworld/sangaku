@@ -11,6 +11,8 @@ Getting Started
 
 Simply `sudo gem install sangaku` and then `require 'sangaku'` in your code.
 
+Look at the examples on this page, the [tests](https://github.com/agworld/sangaku/blob/master/spec) and the [API docs](http://rubydoc.info/github/agworld/sangaku/master/frames) to get up to speed.
+
 Example Usage
 -------------
 
