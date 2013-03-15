@@ -3,8 +3,9 @@ Sangaku
 
 Sangaku is a geometry gem for Ruby.
 
-[![Build Status](https://secure.travis-ci.org/agworld/sangaku.png)](http://travis-ci.org/#!/agworld/sangaku)
+[![Code Climate](https://codeclimate.com/github/agworld/sangaku.png)](https://codeclimate.com/github/agworld/sangaku)
 [![Dependency Status](https://gemnasium.com/agworld/sangaku.png)](https://gemnasium.com/agworld/sangaku)
+[![Build Status](https://secure.travis-ci.org/agworld/sangaku.png)](http://travis-ci.org/#!/agworld/sangaku)
 
 Getting Started
 ---------------
