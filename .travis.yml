@@ -1,0 +1,14 @@
+language: ruby
+bundler_args: --without development document
+notifications:
+  email: false
+rvm:
+  - ree
+  - 1.8.7
+  - jruby-18mode
+  - 1.9.2
+  - 1.9.3
+  - jruby-19mode
+  - 2.0.0
+  - 2.1.0
+  - 2.1.1
