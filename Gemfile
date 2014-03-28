@@ -1,14 +1,14 @@
-source :rubygems
+source "http://rubygems.org"
 
 group :development do
   gem "awesome_print"
+  gem "debugger"
 end
 
 group :test do
   gem "rake"
   gem "rspec"
   gem "yard"
-  gem "debugger"
 end
 
 group :document do
